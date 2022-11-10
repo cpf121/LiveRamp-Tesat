@@ -104,7 +104,7 @@ const onDrop = (e) => {
         Message.warning('The current filter condition already exists!')
         return
     }
-    if(groupData.value.length==0||groupData.value[groupData.value.length-1].length==2){
+    if(groupData.value.length==0||groupData.value[groupData.value.length-1].length>=2){
         groupData.value.push([temp.value])
     }else{
         groupData.value[groupData.value.length-1].push(temp.value)
@@ -128,7 +128,7 @@ const addGroup=(currGroup)=>{
 </script>
 <style lang="scss" scoped>
 .layout{
-    height: 100vh;
+    height: 100%;
     .left{
         background: #fff;
         width: 405px !important;
